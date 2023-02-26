@@ -10,11 +10,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import {MenubarModule} from 'primeng/menubar';
+import {ToastModule} from 'primeng/toast';
+import {MessageService} from 'primeng/api';
+import { HomeComponent } from './modules/home/home.component';
+import { HomeModule } from './modules/home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StefamonComponent
+    StefamonComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,8 +29,10 @@ import {MenubarModule} from 'primeng/menubar';
     CardModule,
     ButtonModule,
     MenubarModule,
+    ToastModule,
+    HomeModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

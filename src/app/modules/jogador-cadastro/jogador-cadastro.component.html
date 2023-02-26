@@ -1,0 +1,15 @@
+<p-card header="Cadastrar novo jogador" [style]="{width: '360px'}" styleClass="p-card-shadow">
+  <div class="flex flex-column card-container green-container">
+    <div class="p-field p-mt-3 flex align-items-center justify-content-center h-4rem  m-2">
+      <label for="login" class="p-sr-only" [(ngModel)]="jogador.nickname">Nickname</label>
+      <input id="login" type="text" pInputText placeholder="Nickname">
+    </div>
+    <div class="p-field flex align-items-center justify-content-center h-4rem">
+      <label for="senha" class="p-sr-only" [(ngModel)]="jogador.senha">Senha</label>
+      <input id="senha" type="password" pInputText placeholder="Senha">
+    </div>
+</div>
+  <ng-template pTemplate="footer">
+      <p-button label="Cadastrar" icon="pi pi-check" (click)="salvarJogador()"></p-button>
+  </ng-template>
+</p-card>
